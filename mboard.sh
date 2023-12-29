@@ -10,6 +10,7 @@ if [ $1 == "start" ]
      docker rmi redleon1/apache2_mboard:1.0
      docker rmi redleon1/tomcat9_mboard:1.0
      docker rmi redleon1/mariadb_mboard:1.0
+     kubectl delete -A ValidatingWebhookConfiguration ingress-nginx-admission
      kubectl apply -f ./yml/mariadb.yml
      kubectl apply -f ./yml/tomcat9.yml
      kubectl apply -f ./yml/apache2.yml
